@@ -13,6 +13,9 @@
   border-radius: 20px;
   background: #fff;
 }
+.character {
+  cursor: pointer;
+}
 /* .logo {
   height: 6em;
   padding: 1.5em;

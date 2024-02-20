@@ -1,5 +1,5 @@
 import { Card, Avatar, ListItem } from ".";
-import User from "../models/user";
+import { User } from "../models";
 
 function Profile() {
   const user: User = {

@@ -1,4 +1,4 @@
-import User from "../models/user";
+import { User } from "../models";
 
 function Avatar({ user, imageSize }: { user: User; imageSize: number }) {
   return (
