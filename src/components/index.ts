@@ -7,6 +7,7 @@ import Profile from "./Profile";
 import Clock from "./Clock";
 import Form from "./Form";
 import MovingDot from "./MovingDot";
+import FootballPlayers from "./FootballPlayers";
 
 export {
   Avatar,
@@ -18,4 +19,5 @@ export {
   Clock,
   Form,
   MovingDot,
+  FootballPlayers,
 };
