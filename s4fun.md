@@ -27,6 +27,11 @@ JSX is an extension of Javascript sintax. It's used to render react components, 
 1. Create a functional component
 2. Nest components
 3. Display data
-4. Conditional rendering
-5. Update the screen
-6. Share data between components
+4. Share data between components
+5. Lists
+6. Conditional rendering
+7. Responding to events
+
+## Handling state
+
+## Fetch data (useEffect)
