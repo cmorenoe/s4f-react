@@ -1,4 +1,4 @@
-import User from "../models/user";
+import User from "../models/User";
 import Avatar from "./Avatar";
 import Card from "./Card";
 import { ListItem } from "./ListItem";
