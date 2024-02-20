@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import { Clock, Form } from "./components";
+import { Clock, Form, MovingDot } from "./components";
 
 function App() {
   const useTime = () => {
@@ -19,6 +19,7 @@ function App() {
         <h1>React for dummies</h1>
         <Clock time={useTime().toLocaleTimeString()} />
         <Form></Form>
+        <MovingDot></MovingDot>
       </div>
     </>
   );

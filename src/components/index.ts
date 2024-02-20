@@ -6,5 +6,16 @@ import ListItem from "./ListItem";
 import Profile from "./Profile";
 import Clock from "./Clock";
 import Form from "./Form";
+import MovingDot from "./MovingDot";
 
-export { Avatar, Button, Card, Counter, ListItem, Profile, Clock, Form };
+export {
+  Avatar,
+  Button,
+  Card,
+  Counter,
+  ListItem,
+  Profile,
+  Clock,
+  Form,
+  MovingDot,
+};
