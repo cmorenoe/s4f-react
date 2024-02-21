@@ -9,35 +9,22 @@ import axios from "axios";
 
 const apiUrl = "https://rickandmortyapi.com/api/character";
 function App() {
-  // const [showRickMorty, setShowRickMorty] = useState(false);
-  // const handleClick = () => {
-  //   setShowRickMorty((prev) => !prev);
-  // };
+  const [showRickMorty, setShowRickMorty] = useState(false);
+  const handleClick = () => {
+    setShowRickMorty((prev) => !prev);
+  };
 
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   const [characters, setCharacters] = useState<Array<RickMortyCharacter>>([]);
-  //   useEffect(() => {
-  //     console.log("Use effect 1"); // Each render
-  //   });
-
-  //   useEffect(() => {
-  //     console.log("Use effect 2"); // Only in mount component
-  //   }, []);
-
-  //   useEffect(() => {
-  //     return () => {
-  //       console.log("Effect 3"); // Unmounting component, remove listeners
-  //     };
-  //   }, []);
 
   useEffect(() => {
     async function fetchData() {
       const response = await axios.get<{ results: RickMortyCharacter[] }>(
         apiUrl
       );
-      console.log(response.data.results);
+      console.log("rick&morty response api", response.data.results);
       setCharacters(response.data.results);
-      setLoading(false);
+      // setLoading(false);
     }
     setTimeout(() => {
       fetchData();
@@ -49,10 +36,12 @@ function App() {
         <h1>React for dummies</h1>
         {/* <Profile></Profile> */}
         {/* <Counter /> */}
-        {/* {showRickMorty && <RickMorty></RickMorty>}
-        <Button text="Mount/Unmmount Rick Morty" handleOnClick={handleClick} /> */}
-        {loading && <div>Loading...</div>}
-        {!loading && <RickMortyList characters={characters} />}
+        <Button text="Mount/Unmmount Rick Morty" handleOnClick={handleClick} />
+        {showRickMorty && (
+          <RickMortyList characters={characters}></RickMortyList>
+        )}
+        {/* {loading && <div>Loading...</div>}
+        {!loading && <RickMortyList characters={characters} />} */}
       </div>
     </>
   );

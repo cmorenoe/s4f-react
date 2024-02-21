@@ -13,13 +13,26 @@ const RickMortyList = ({
   const [character, setCharacter] = useState<RickMortyCharacter | null>(null);
 
   useEffect(() => {
-    const getCharacter = async () => {
-      if (!character) return;
-      const response = await axios.get(`${apiUrl}/${character.id}`);
-      console.log(response.data);
+    console.log("Use effect 1"); // Each render
+  });
+
+  useEffect(() => {
+    console.log("Use effect 2"); // Only in mount component
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      console.log("Effect 3"); // Unmounting component, remove listeners
     };
-    getCharacter();
-  }, [character]);
+  }, []);
+  // useEffect(() => {
+  //   const getCharacter = async () => {
+  //     if (!character) return;
+  //     const response = await axios.get(`${apiUrl}/${character.id}`);
+  //     console.log(response.data);
+  //   };
+  //   getCharacter();
+  // }, [character]);
 
   const selectCharacter = (character: RickMortyCharacter) => {
     console.log("Selected", character.name, character.id);
