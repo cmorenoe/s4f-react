@@ -12,8 +12,8 @@ function App() {
   // const [showRickMorty, setShowRickMorty] = useState(false);
   // const handleClick = () => {
   //   setShowRickMorty((prev) => !prev);
-  // };    const OtherComponent = React.lazy(() => import('./OtherComponent'));
-  // const RickMortyList = React.lazy(() => import("./components/RickMortyList"));
+  // };
+
   const [loading, setLoading] = useState(true);
   const [characters, setCharacters] = useState<Array<RickMortyCharacter>>([]);
   //   useEffect(() => {
